@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost:27017';
+const mongoUri = 'mongodb://0.0.0.0:27017';
 
 const ConnectToMongo = async () => {
     try {
