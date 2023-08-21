@@ -16,6 +16,6 @@ ConnectToMongo().then(() => {
     app.listen(port, () => {
         console.log(`Example app listening on http://localhost:${port}`);
     });
-}).catch((error) => {
+}).catch((error) => {       //error if problem on hosting
     console.error('Error during startup:', error.message);
 });
