@@ -1,0 +1,1 @@
+This has error notes.map is not a function is because of auth-token confusion check comments of video 72

@@ -15,7 +15,7 @@ const NoteState = (props) => {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlNDVjYWU2ZmM1ZGQ1NDhiZjgwN2YwIn0sImlhdCI6MTY5MjY4OTY0MH0.nomC2qlT9aRdB8EtmpJwmPf7QEn0wqq4PfeUcQBxxog"
+                "auth-token": localStorage.getItem("auth-token")
             }
         })
         
@@ -31,24 +31,14 @@ const NoteState = (props) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlNDVjYWU2ZmM1ZGQ1NDhiZjgwN2YwIn0sImlhdCI6MTY5MjY4OTY0MH0.nomC2qlT9aRdB8EtmpJwmPf7QEn0wqq4PfeUcQBxxog"
+                "auth-token": localStorage.getItem("auth-token")
             },
             body: JSON.stringify({title,description,tag}),
         });
-        const json=await response.json()
-        console.log(json)
-        
-        console.log("adding a new note")
-        const note = {
-            "_id": "64e762f03765bb546f126ef27",
-            "user": "64e45cae6fc5dd548bf807f0",
-            "title": title,
-            "description": description,
-            "tag": tag,
-            "date": "1692885744949",
-            "__v": 0
-        }
+        const note=await response.json()
         setNotes(notes.concat(note))
+        console.log("adding a new note")
+
     }
     //delete note
     const deleteNote = async (id) => {
@@ -57,7 +47,7 @@ const NoteState = (props) => {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlNDVjYWU2ZmM1ZGQ1NDhiZjgwN2YwIn0sImlhdCI6MTY5MjY4OTY0MH0.nomC2qlT9aRdB8EtmpJwmPf7QEn0wqq4PfeUcQBxxog"
+                "auth-token": localStorage.getItem("auth-token")
             }
         });
         const json= await response.json();
@@ -76,7 +66,7 @@ const NoteState = (props) => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
-                "auth-token": " eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlNDVjYWU2ZmM1ZGQ1NDhiZjgwN2YwIn0sImlhdCI6MTY5MjY4OTY0MH0.nomC2qlT9aRdB8EtmpJwmPf7QEn0wqq4PfeUcQBxxog"
+                "auth-token": localStorage.getItem("auth-token")
             },
             body: JSON.stringify({title,description,tag}),
         });
