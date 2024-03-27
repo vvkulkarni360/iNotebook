@@ -18,8 +18,8 @@ const NoteState = (props) => {
                 "auth-token": localStorage.getItem("auth-token")
             }
         })
-        
-        const json=await response.json()
+
+        const json = await response.json()
         console.log(json)
         setNotes(json);
     }
@@ -33,9 +33,9 @@ const NoteState = (props) => {
                 "Content-Type": "application/json",
                 "auth-token": localStorage.getItem("auth-token")
             },
-            body: JSON.stringify({title,description,tag}),
+            body: JSON.stringify({ title, description, tag }),
         });
-        const note=await response.json()
+        const note = await response.json()
         setNotes(notes.concat(note))
         console.log("adding a new note")
 
@@ -50,12 +50,12 @@ const NoteState = (props) => {
                 "auth-token": localStorage.getItem("auth-token")
             }
         });
-        const json= await response.json();
+        const json = await response.json();
         console.log(json)
         console.log("deleting note with id" + id)
         const newNotes = notes.filter((note) => { return note._id !== id })
         setNotes(newNotes)
-        
+
 
     }
     //edit note
@@ -68,32 +68,32 @@ const NoteState = (props) => {
                 "Content-Type": "application/json",
                 "auth-token": localStorage.getItem("auth-token")
             },
-            body: JSON.stringify({title,description,tag}),
+            body: JSON.stringify({ title, description, tag }),
         });
-        const json= await response.json();
+        const json = await response.json();
         console.log(json)
-    
-        let newNotes=JSON.parse(JSON.stringify(notes))
-    //logic to edit in client
-    for (let index = 0; index < newNotes.length; index++) {
-        const element = newNotes[index];
-        if (element._id === id) {
-            newNotes[index].title = title
-            newNotes[index].description = description
-            newNotes[index].tag = tag
-            break;
+
+        let newNotes = JSON.parse(JSON.stringify(notes))
+        //logic to edit in client
+        for (let index = 0; index < newNotes.length; index++) {
+            const element = newNotes[index];
+            if (element._id === id) {
+                newNotes[index].title = title
+                newNotes[index].description = description
+                newNotes[index].tag = tag
+                break;
+            }
+
         }
-
+        setNotes(newNotes)
     }
-    setNotes(newNotes)
-}
 
 
-return (
-    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote,getNotes }}>
-        {props.children}
-    </NoteContext.Provider>
-)
+    return (
+        <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes }}>
+            {props.children}
+        </NoteContext.Provider>
+    )
 }
 
 export default NoteState

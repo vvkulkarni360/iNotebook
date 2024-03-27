@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const { MongoClient, ServerApiVersion } = require("mongodb");
+// const mongoURI = 'mongodb://0.0.0.0:27017/inotebook';
 const mongoURI = 'mongodb://0.0.0.0:27017/inotebook';
 
 const ConnectToMongo = async () => {
