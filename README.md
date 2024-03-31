@@ -35,9 +35,10 @@ While working on this project, I encountered a few challenges:
 - **Understanding useContext Hook:** Initially confusing but now well-understood.
 - **JWT Verification:** Faced technical difficulties, took time to resolve despite correct syntax.
 
-![Screenshot 2024-03-31 150029](https://github.com/vvkulkarni360/iNotebook/assets/119601667/d299cc17-6200-439f-bef4-5e6401a26512)
+
 ![Screenshot 2024-03-31 150047](https://github.com/vvkulkarni360/iNotebook/assets/119601667/f739fae5-b326-42f5-8782-33c4784938e4)
 ![Screenshot 2024-03-31 145917](https://github.com/vvkulkarni360/iNotebook/assets/119601667/b6512949-e047-4961-800f-ee4076374114)
 ![Screenshot 2024-03-31 144613](https://github.com/vvkulkarni360/iNotebook/assets/119601667/ad49c93c-ba8d-4ef0-90ca-90267813ab0f)
 ![Screenshot 2024-03-31 144530](https://github.com/vvkulkarni360/iNotebook/assets/119601667/afe2b91d-6a21-44af-91d9-bc32cd872f5e)
 ![Screenshot 2024-03-31 144331](https://github.com/vvkulkarni360/iNotebook/assets/119601667/190f59ef-d24a-4fd8-8e7d-79d1bcbf76d2)
+![Screenshot 2024-03-31 150029-1](https://github.com/vvkulkarni360/iNotebook/assets/119601667/45be93b1-2b6f-4d5d-90cc-a4e414af5896)
