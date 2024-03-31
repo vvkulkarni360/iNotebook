@@ -15,6 +15,7 @@ One of the key highlights of this project is the use of JSON Web Tokens (JWT). H
 - **JWT Generation:** A unique JWT is generated for each user.
 - **Middleware Verification:** JWT is verified every time a CRUD operation is performed, ensuring secure access.
 - **Hashed Passwords:** User passwords are hashed for security, maintaining privacy.
+- **Alert Notifications:** Alerts are displayed on top for every operation, enhancing user experience.
 
 ## Technical Details
 
